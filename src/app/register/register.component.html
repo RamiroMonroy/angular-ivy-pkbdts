@@ -1,0 +1,14 @@
+<p>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" name="using2FA" [(ngModel)]="form.using2FA" #using2FA="ngModel" /><label class="form-check-label" for="using2FA">Use
+        Two Step Verification</label>
+</div>
+
+<div class="alert alert-success" *ngIf="isSuccessful">
+    Your registration is successful!
+    <div *ngIf="isUsing2FA">
+        <p>Scan this QR code using Google Authenticator app on your phone to use it later to login</p>
+        <img src="{{qrCodeImage}}" class="img-fluid" />
+    </div>
+</div>
+</p>
